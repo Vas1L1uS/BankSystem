@@ -1,19 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
 using System.Windows.Input;
 using BankSystem.Infrastructure.Commands;
-using BankSystem.Models;
-using BankSystem.Models.Clients;
+using ModelsForBankSystem;
 using BankSystem.Views;
+using ExceptionLib;
 
 namespace BankSystem.ViewModels
 {
@@ -117,19 +110,42 @@ namespace BankSystem.ViewModels
 
         private void OnCreateClientExecuted(object p)
         {
-            Client newClient = new Client
+            try
             {
-                Surname = ViewSelectedClient.Surname,
-                Name = ViewSelectedClient.Name,
-                Patronymic = ViewSelectedClient.Patronymic,
-                PhoneNumber = ViewSelectedClient.PhoneNumber,
-                PassportNumber = ViewSelectedClient.PassportNumber,
-            };
-            var args = new ChangesClientArgs(ChangesClientArgs.TypeChanges.Create, $"{newClient.Surname} {newClient.Name} {newClient.Patronymic}");
-            newClient.Changes += AddNewChangesInHistoryOfChangesList;
-            newClient.InvokeEvent(args);
-            ClientsList.Add(newClient);
-            SelectedClient = ClientsList.Last();
+                if (ViewSelectedClient.PhoneNumber == 0)
+                {
+                    throw new IncorrectDataClientException("Ошибка", 1);
+                }
+                else if (ViewSelectedClient.PassportNumber == 0)
+                {
+                    throw new IncorrectDataClientException("Ошибка", 2);
+                }
+                Client newClient = new Client
+                {
+                    Surname = ViewSelectedClient.Surname,
+                    Name = ViewSelectedClient.Name,
+                    Patronymic = ViewSelectedClient.Patronymic,
+                    PhoneNumber = ViewSelectedClient.PhoneNumber,
+                    PassportNumber = ViewSelectedClient.PassportNumber,
+                };
+                var args = new ChangesClientArgs(ChangesClientArgs.TypeChanges.Create, $"{newClient.Surname} {newClient.Name} {newClient.Patronymic}");
+                newClient.Changes += AddNewChangesInHistoryOfChangesList;
+                newClient.InvokeEvent(args);
+                ClientsList.Add(newClient);
+                SelectedClient = ClientsList.Last();
+            }
+            catch (IncorrectDataClientException e) when (e.CodeError == 1)
+            {
+                MessageBox.Show("Не заполено поле номера телефона!", "Ошибка!", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            catch (IncorrectDataClientException e) when (e.CodeError == 2)
+            {
+                MessageBox.Show("Не заполено поле номера паспорта!", "Ошибка!", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show($"Не предусмотренная ошибка {e.Message}", "Ошибка!", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         public ICommand IEditClientCommand { get; }

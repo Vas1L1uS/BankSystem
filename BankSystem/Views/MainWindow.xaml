@@ -6,7 +6,6 @@
         xmlns:cmd="clr-namespace:BankSystem.Infrastructure.Commands"
         xmlns:vm="clr-namespace:BankSystem.ViewModels"
         xmlns:local="clr-namespace:BankSystem"
-        xmlns:clients="clr-namespace:BankSystem.Models.Clients"
         mc:Ignorable="d"
         Title="{Binding Path=Title}"
         Height="450" Width="800"

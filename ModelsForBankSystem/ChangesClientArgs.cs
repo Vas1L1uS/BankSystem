@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static System.Net.Mime.MediaTypeNames;
 
-namespace BankSystem.Models
+namespace ModelsForBankSystem
 {
-    internal class ChangesClientArgs
+    public class ChangesClientArgs
     {
         public ChangesClientArgs(TypeChanges typeChanges, string text = "Без комментариев")
         {

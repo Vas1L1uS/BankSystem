@@ -1,18 +1,13 @@
 ﻿using BankSystem.Infrastructure.Commands;
-using BankSystem.Models.BankAccounts;
-using BankSystem.Models.Clients;
-using System;
-using System.Collections.Generic;
+using ModelsForBankSystem.BankAccounts;
+using ModelsForBankSystem;
 using System.Linq;
-using System.Net;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
 using System.Windows;
 using System.Windows.Controls;
 using System.Collections.ObjectModel;
-using System.ComponentModel;
-using BankSystem.Models;
+using System;
+using ExceptionLib;
 
 namespace BankSystem.ViewModels
 {
@@ -122,9 +117,16 @@ namespace BankSystem.ViewModels
 
         private void OnCreateBankAccountExecuted(object p)
         {
-            SelectedClient.BankAccountsList.Add(new BankAccount());
-            var args = new ChangesClientArgs(ChangesClientArgs.TypeChanges.OpenAccount, $"{SelectedClient.Surname} {SelectedClient.Name} {SelectedClient.Patronymic} Открыт счет {SelectedClient.BankAccountsList.Last().ID}");
-            SelectedClient.InvokeEvent(args);
+            try
+            {
+                SelectedClient.BankAccountsList.Add(new BankAccount());
+                var args = new ChangesClientArgs(ChangesClientArgs.TypeChanges.OpenAccount, $"{SelectedClient.Surname} {SelectedClient.Name} {SelectedClient.Patronymic} Открыт счет {SelectedClient.BankAccountsList.Last().ID}");
+                SelectedClient.InvokeEvent(args);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show($"Не предусмотренная ошибка {e.Message}", "Ошибка!", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         public ICommand IDeleteBankAccount { get; }

@@ -1,15 +1,8 @@
-﻿using BankSystem;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using BankSystem.Models.Clients;
-using BankSystem.Models.Interfaces;
+﻿using ModelsForBankSystem.Interfaces;
 
-namespace BankSystem.Models.BankAccounts
+namespace ModelsForBankSystem.BankAccounts
 {
-    internal class BankAccount : ITransferable
+    public class BankAccount : ITransferable
     {
         public bool AccountOpen
         {

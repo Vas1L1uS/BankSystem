@@ -5,6 +5,10 @@ VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankSystem", "BankSystem\BankSystem.csproj", "{9A42328E-A28A-4BDD-B62D-A8FD71A0117B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelsForBankSystem", "ModelsForBankSystem\ModelsForBankSystem.csproj", "{E40A6354-FBFC-44F7-99EF-7B3F40302C3C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExceptionLib", "ExceptionLib\ExceptionLib.csproj", "{F17BD695-0B82-4043-A7AE-D7789144D2CA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{9A42328E-A28A-4BDD-B62D-A8FD71A0117B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9A42328E-A28A-4BDD-B62D-A8FD71A0117B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9A42328E-A28A-4BDD-B62D-A8FD71A0117B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E40A6354-FBFC-44F7-99EF-7B3F40302C3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E40A6354-FBFC-44F7-99EF-7B3F40302C3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E40A6354-FBFC-44F7-99EF-7B3F40302C3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E40A6354-FBFC-44F7-99EF-7B3F40302C3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F17BD695-0B82-4043-A7AE-D7789144D2CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F17BD695-0B82-4043-A7AE-D7789144D2CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F17BD695-0B82-4043-A7AE-D7789144D2CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F17BD695-0B82-4043-A7AE-D7789144D2CA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

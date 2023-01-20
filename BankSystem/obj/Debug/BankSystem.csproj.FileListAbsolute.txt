@@ -36,3 +36,8 @@ C:\MyFolders\GitHub\BankSystem\BankSystem\obj\Debug\BankSystem.csproj.GenerateRe
 C:\MyFolders\GitHub\BankSystem\BankSystem\obj\Debug\BankSystem.csproj.CoreCompileInputs.cache
 C:\MyFolders\GitHub\BankSystem\BankSystem\obj\Debug\BankSystem.exe
 C:\MyFolders\GitHub\BankSystem\BankSystem\obj\Debug\BankSystem.pdb
+C:\MyFolders\GitHub\BankSystem\BankSystem\bin\Debug\ModelsForBankSystem.dll
+C:\MyFolders\GitHub\BankSystem\BankSystem\bin\Debug\ModelsForBankSystem.pdb
+C:\MyFolders\GitHub\BankSystem\BankSystem\obj\Debug\BankSystem.csproj.CopyComplete
+C:\MyFolders\GitHub\BankSystem\BankSystem\bin\Debug\ExceptionLib.dll
+C:\MyFolders\GitHub\BankSystem\BankSystem\bin\Debug\ExceptionLib.pdb

@@ -1,0 +1,6 @@
+C:\MyFolders\GitHub\BankSystem\ExceptionLib\obj\Debug\ExceptionLib.csproj.AssemblyReference.cache
+C:\MyFolders\GitHub\BankSystem\ExceptionLib\obj\Debug\ExceptionLib.csproj.CoreCompileInputs.cache
+C:\MyFolders\GitHub\BankSystem\ExceptionLib\bin\Debug\ExceptionLib.dll
+C:\MyFolders\GitHub\BankSystem\ExceptionLib\bin\Debug\ExceptionLib.pdb
+C:\MyFolders\GitHub\BankSystem\ExceptionLib\obj\Debug\ExceptionLib.dll
+C:\MyFolders\GitHub\BankSystem\ExceptionLib\obj\Debug\ExceptionLib.pdb

@@ -1,13 +1,10 @@
-﻿using BankSystem.Models.BankAccounts;
+﻿using ModelsForBankSystem.BankAccounts;
 using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Net;
-using System.Xml.Linq;
 
-namespace BankSystem.Models.Clients
+namespace ModelsForBankSystem
 {
-    class Client : IComparable<Client>, ICloneable
+    public class Client : IComparable<Client>, ICloneable
     {
         /// <summary>
         /// Фамилия

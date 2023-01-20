@@ -70,10 +70,6 @@
     <Compile Include="Infrastructure\Commands\Base\Command.cs" />
     <Compile Include="Infrastructure\Commands\CloseApplicationCommand.cs" />
     <Compile Include="Infrastructure\Commands\LambdaCommand.cs" />
-    <Compile Include="Models\BankAccounts\Base\BankAccount.cs" />
-    <Compile Include="Models\BankAccounts\Interfaces\ITransferable.cs" />
-    <Compile Include="Models\ChangesClientArgs.cs" />
-    <Compile Include="Models\Clients\Client.cs" />
     <Compile Include="ViewModels\BankAccountViewModel.cs" />
     <Compile Include="ViewModels\Base\ViewModel.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
@@ -111,6 +107,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\ExceptionLib\ExceptionLib.csproj">
+      <Project>{f17bd695-0b82-4043-a7ae-d7789144d2ca}</Project>
+      <Name>ExceptionLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ModelsForBankSystem\ModelsForBankSystem.csproj">
+      <Project>{e40a6354-fbfc-44f7-99ef-7b3f40302c3c}</Project>
+      <Name>ModelsForBankSystem</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

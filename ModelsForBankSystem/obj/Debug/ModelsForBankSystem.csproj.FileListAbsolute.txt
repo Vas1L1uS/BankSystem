@@ -1,0 +1,6 @@
+C:\MyFolders\GitHub\BankSystem\ModelsForBankSystem\bin\Debug\ModelsForBankSystem.dll
+C:\MyFolders\GitHub\BankSystem\ModelsForBankSystem\bin\Debug\ModelsForBankSystem.pdb
+C:\MyFolders\GitHub\BankSystem\ModelsForBankSystem\obj\Debug\ModelsForBankSystem.csproj.AssemblyReference.cache
+C:\MyFolders\GitHub\BankSystem\ModelsForBankSystem\obj\Debug\ModelsForBankSystem.csproj.CoreCompileInputs.cache
+C:\MyFolders\GitHub\BankSystem\ModelsForBankSystem\obj\Debug\ModelsForBankSystem.dll
+C:\MyFolders\GitHub\BankSystem\ModelsForBankSystem\obj\Debug\ModelsForBankSystem.pdb
